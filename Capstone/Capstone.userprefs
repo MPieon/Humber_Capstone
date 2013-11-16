@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\characterController.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AI\Interviewee_Emotion.cs">
     <Files>
-      <File FileName="Assets\Scripts\characterController.cs" Line="79" Column="18" />
+      <File FileName="Assets\Scripts\AI\Interviewee_Emotion.cs" Line="11" Column="2" />
+      <File FileName="Assets\Scripts\Player\Player_Initiate_Interview.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\Player_Interview.cs" Line="6" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
