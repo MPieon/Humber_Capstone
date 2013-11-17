@@ -23,10 +23,10 @@ public class characterController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		downVect.Set (1, 0, 1);
-		upVect.Set(-1, 0, -1);
-		leftVect.Set(1, 0, -1);
-		rightVect.Set(-1, 0, 1);
+		downVect.Set (1, 1, 0);
+		upVect.Set(-1, -1, 0);
+		leftVect.Set(1, -1, 0);
+		rightVect.Set(-1, 1, 0);
 		speed = 0.06f;
 		timer = 0.0f;
 		avar = 1;
@@ -53,7 +53,7 @@ public class characterController : MonoBehaviour {
 					
 				}
 			}
-			 if(Input.GetKey(KeyCode.W)){
+			 else if(Input.GetKey(KeyCode.W)){
 				transform.Translate(upVect * speed);
 				if(timer > 0.2f){
 					if(avar==1){
@@ -67,7 +67,7 @@ public class characterController : MonoBehaviour {
 					
 				}
 			}
-			 if(Input.GetKey(KeyCode.A)){
+			 else if(Input.GetKey(KeyCode.A)){
 				transform.Translate(leftVect * speed);
 				if(timer > 0.2f){
 					if(avar==1){
@@ -81,7 +81,7 @@ public class characterController : MonoBehaviour {
 					
 				}
 			}
-			 if(Input.GetKey(KeyCode.D)){
+			 else if(Input.GetKey(KeyCode.D)){
 				transform.Translate(rightVect * speed);	
 				if(timer > 0.2f){
 					if(avar==1){
