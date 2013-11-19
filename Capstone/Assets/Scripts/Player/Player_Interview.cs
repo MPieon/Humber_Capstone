@@ -8,7 +8,10 @@ public class Player_Interview : MonoBehaviour
 	
 	private GameObject goIntervieweeFace;
 	private GameObject goClipboard;
-	
+
+	//private GUITexture GUI_IntervieweeFace;
+	//private GUITexture GUI_Clipboard;
+
 	private bool bFaceLoaded;
 	private bool bClipLoaded;
 
@@ -59,7 +62,7 @@ public class Player_Interview : MonoBehaviour
 			bFaceLoaded = true;
 			goIntervieweeFace = Instantiate(Resources.Load(sIntervieweeName + "_Face")) as GameObject;
 			//Instantiate(Resources.Load(sIntervieweeName + "_Face"));
-			goIntervieweeFace.transform.Translate(this.transform.position.x, this.transform.position.y, this.transform.position.z, Space.World);
+			//goIntervieweeFace.transform.Translate(this.transform.position.x, this.transform.position.y, this.transform.position.z, Space.World);
 		}	
 	}
 	
@@ -67,10 +70,10 @@ public class Player_Interview : MonoBehaviour
 	{
 		if(!bClipLoaded)
 		{
-			print ("Loading Clipboard");
+			//print ("Loading Clipboard");
 			bClipLoaded = true;
 			goClipboard = Instantiate(Resources.Load ("Clipboard")) as GameObject;
-			goClipboard.transform.Translate(this.transform.position.x, this.transform.position.y, this.transform.position.z, Space.World);
+			//goClipboard.transform.Translate(this.transform.position.x, this.transform.position.y, this.transform.position.z, Space.World);
 		}
 	}
 

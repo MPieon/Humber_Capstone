@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\Player_Interview.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\SceneManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\AI\Interviewee_Emotion.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Player_Initiate_Interview.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player\Player_Interview.cs" Line="62" Column="94" />
+      <File FileName="Assets\Scripts\Player\Player_Interview.cs" Line="73" Column="6" />
+      <File FileName="Assets\Scripts\AI\Interviewee_Emotion.cs" Line="28" Column="46" />
+      <File FileName="Assets\Scripts\Player\SceneManager.cs" Line="34" Column="69" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

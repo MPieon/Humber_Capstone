@@ -11,6 +11,7 @@ public class SceneManager : MonoBehaviour
 
 	void Start () 
 	{
+		//print (Screen.width + "<Width-Height>" + Screen.height);
 		bOption = new bool[4];
 		for(int i = 0; i < 4; i++)
 		{
@@ -19,7 +20,10 @@ public class SceneManager : MonoBehaviour
 		iOption = -1;
 	}
 	
-	void Update () {}
+	void Update () 
+	{
+
+	}
 	
 	void OnGUI()
 	{
@@ -27,9 +31,9 @@ public class SceneManager : MonoBehaviour
 		{
 			GUI.skin = guiSkin;
 
-			GUI.BeginGroup(new Rect(this.transform.position.x + 425, this.transform.position.y + 125, 300, 380));
+			GUI.BeginGroup(new Rect(Screen.width / 6.0f, Screen.height / 4.79f, 300, 380));
 
-			GUI.Box(new Rect(0, 0, 300, 380), "Pause Menu");
+			GUI.Box(new Rect(0, 0, 300, 380), "Facial Expression Menu (Testing)");
 
 
 			bOption[0] = GUI.Toggle(new Rect(10, 30, 180, 60), bOption[0], " Happy face");
