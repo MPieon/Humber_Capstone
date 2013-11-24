@@ -8,16 +8,20 @@ public class SceneManager : MonoBehaviour
 	private bool[] bOption;
 
 	public static int iOption;
+    public static bool bSelectionMade;
+    private int iVisibleOption;
 
 	void Start () 
 	{
 		//print (Screen.width + "<Width-Height>" + Screen.height);
 		bOption = new bool[4];
+        iVisibleOption = 0;
 		for(int i = 0; i < 4; i++)
 		{
 			bOption[i] = false;
 		}
 		iOption = -1;
+        bSelectionMade = false;
 	}
 	
 	void Update () 
@@ -27,69 +31,86 @@ public class SceneManager : MonoBehaviour
 	
 	void OnGUI()
 	{
-		if(characterController.bInterviewing)
-		{
-			GUI.skin = guiSkin;
+        if (characterController.bInterviewing)
+        {
+            GUI.skin = guiSkin;
 
-			GUI.BeginGroup(new Rect(Screen.width / 6.0f, Screen.height / 4.79f, 300, 380));
+            GUI.BeginGroup(new Rect(Screen.width / 6.0f - 35, Screen.height / 4.79f, 300, 380));
 
-			GUI.Box(new Rect(0, 0, 300, 380), "Facial Expression Menu (Testing)");
+            GUI.Box(new Rect(0, 0, 300, 380), "Talking with: " + Player_Interview.sIntervieweeName);
 
+            //print(XML_Load.sPlayer_Options[0]);
 
-			bOption[0] = GUI.Toggle(new Rect(10, 30, 180, 60), bOption[0], " Happy face");
-			if(bOption[0])
-			{
-				//iOption = 0;
-				bOption[1] = false;
-				bOption[2] = false;
-				bOption[3] = false;
-			}
+           // print(iVisibleOption);
 
-			bOption[1] = GUI.Toggle(new Rect(10, 95, 180, 60), bOption[1], " Neutral face");
-			if(bOption[1])
-			{
-				//iOption = 1;
-				bOption[0] = false;
-				bOption[2] = false;
-				bOption[3] = false;
-			}
+            if (iVisibleOption == 4)
+            {
+                if (GUI.Button(new Rect(50, 290, 180, 60), "End Conversation")) characterController.bInterviewing = false;
+            }
+            else
+            {
+                iVisibleOption = 0;
 
-			bOption[2] = GUI.Toggle(new Rect(10, 160, 180, 60), bOption[2], " Sad face");
-			if(bOption[2])
-			{
-				//iOption = 2;
-				bOption[1] = false;
-				bOption[0] = false;
-				bOption[3] = false;
-			}
+                for (int i = 0; i < 4; i++)
+                {
+                    if (XML_Load.sPlayer_Options[i].Length != 0)
+                    {
+                        bOption[i] = GUI.Toggle(new Rect(10, 30 + 65 * i, 300, 60), bOption[i], "" + XML_Load.sPlayer_Options[i]);
+                        if (bOption[i])
+                        {
+                            bOption[0] = false;
+                            bOption[1] = false;
+                            bOption[2] = false;
+                            bOption[3] = false;
+                            bOption[i] = true;
+                        }
+                    }
+                    else iVisibleOption++;
+                }
 
-			bOption[3] = GUI.Toggle(new Rect(10, 225, 180, 60), bOption[3], " --------");
-			if(bOption[3])
-			{
-				//iOption = 3;
-				bOption[1] = false;
-				bOption[2] = false;
-				bOption[0] = false;
-			}
+                if (GUI.Button(new Rect(50, 290, 180, 60), "Confirm Selection"))
+                {
+                    for (int i = 0; i < 4; i++)
+                    {
+                        if (bOption[i])
+                        {
+                            iOption = i;
+                            bSelectionMade = true;
+                            bOption[i] = false;
+                            //iVisibleOption = 0;
+                        }
+                    }
+                }
+            }
+            
+            //	Tuts = GUI.Toggle(new Rect(10, 30, 180, 30), bTuts, " Toogle Tutorials");
 
-			if(GUI.Button(new Rect(50, 290, 180, 60), "Confirm Selection"))
-			{
-				for(int i = 0; i < 4; i++)
-				{
-					if(bOption[i]) iOption = i;
-				}
-			}
+            //if(GUI.Button(new Rect(10, 30, 180, 60), "Resume Game")) Time.timeScale = 1;
+            //if(GUI.Button(new Rect(10, 95, 180, 60), "Options")) bOptions = true;
+            //if(GUI.Button(new Rect(10, 160, 180, 60), "Save Game")){}
+            //if(GUI.Button(new Rect(10, 225, 180, 60), "Load Game")) {}
+            //if(GUI.Button(new Rect(10, 290, 180, 60), "Exit to Main Menu")) Application.LoadLevel("MainMenu");
 
-		//	Tuts = GUI.Toggle(new Rect(10, 30, 180, 30), bTuts, " Toogle Tutorials");
+            GUI.EndGroup();
 
-			//if(GUI.Button(new Rect(10, 30, 180, 60), "Resume Game")) Time.timeScale = 1;
-			//if(GUI.Button(new Rect(10, 95, 180, 60), "Options")) bOptions = true;
-			//if(GUI.Button(new Rect(10, 160, 180, 60), "Save Game")){}
-			//if(GUI.Button(new Rect(10, 225, 180, 60), "Load Game")) {}
-			//if(GUI.Button(new Rect(10, 290, 180, 60), "Exit to Main Menu")) Application.LoadLevel("MainMenu");
-			
-			GUI.EndGroup();
-		}
+            GUI.BeginGroup(new Rect(Screen.width / 2.0f + 50, Screen.height / 4.79f - 25, 300, 100));
+
+            GUI.Label(new Rect(0, 0, 300, 100), "" + XML_Load.sInterviewee_Says);
+            //GUI.Box(new Rect(0, 0, 300, 100), "" + XML_Load.sInterviewee_Says);
+
+            GUI.EndGroup();
+        }
+        else
+        {
+            bOption = new bool[4];
+            iVisibleOption = 0;
+            for (int i = 0; i < 4; i++)
+            {
+                bOption[i] = false;
+            }
+            iOption = -1;
+            bSelectionMade = false;
+        }
 //		else if(Time.timeScale == 0 && bOptions)
 //		{
 //			GUI.skin = guiSkinPause;

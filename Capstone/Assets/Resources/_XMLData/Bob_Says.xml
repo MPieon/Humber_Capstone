@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Bob>
+	<!--	Each time you talk to Bob new Convo starts	-->
+	<Convo_0>
+		<!-- First Bob Says -->
+		<Say>Hello, my names Bob</Say> 
+		
+		<!-- Bob Response to player -->
+		<R1>Umm... Okay?</R1>
+		<R2>What can I do for ya officer?</R2>
+		
+		<!-- Second Bob Response to player -->
+		<R11>Thats just Racist goodbye..</R11>
+		<R12>I don't feel like talking to you</R12>
+		<R13>Right.. Goodbye</R13>
+		<R14>GOODBYE</R14>
+		
+		<R21>Yes, ask away officer! I'm willing to help you with anything</R21>
+		<R22>What?!</R22>
+		<R23>Is that all you had to say to me? Quit wasting my time</R23>
+		<R24>I think so. Why?</R24>
+		
+
+	</Convo_0>
+	<Convo_1>
+	
+	</Convo_1>
+</Bob>

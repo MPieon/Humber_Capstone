@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Answers>
+	<!--	Each time you talk to Bob new Convo starts	-->
+	<Convo_0>
+		<!-- First response to what Bob says -->
+		<A1>Yo, Yo, YO!!</A1>
+		<A2>Hello, Bob my name is Officer:</A2>
+		
+		<!-- Second response to what Bob says (Depending on what Bob has said) -->
+		<A11>What I though you were from the hood?</A11>
+		<A12>Sorry, let me try again</A12>
+		<A13>I like pancakes</A13>
+		<A14>YOU AIN'T GOT NO PANCAKE MIX</A14>
+		
+		<A21>I am investigating a case. I would like to ask you some questions</A21>
+		<A22>Did you do it?!</A22>
+		<A23>I think you need to grow a mustache Bob this is movember after all</A23>
+		<A24>Do you have pancake mix?</A24>
+		
+		<!-- Third response to what Bob says (Depending on that Bob has said) -->
+		
+	</Convo_0>
+	
+	<!-- New Convo with Bob. After a certain period of time -->
+	<Convo_1>
+	
+	</Convo_1>
+</Answers>
