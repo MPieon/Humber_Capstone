@@ -1,0 +1,9 @@
+init :  I am sorry I have to go to work, what is it?
+
+player: Can you tell me what happened here?
+	Can I ask you a few questions?
+
+	1 Sorry, I have to go
+	2 sure, what can I help you with officer?
+
+	
