@@ -61,8 +61,10 @@ public class Player_Interview : MonoBehaviour
 			bFaceLoaded = true;
             //loading the speach bubble
             goSPBL = Instantiate(Resources.Load("SpBub")) as GameObject;
-
-			goIntervieweeFace = Instantiate(Resources.Load(sIntervieweeName + "_Face")) as GameObject;
+            if(Resources.Load(sIntervieweeName + "_Face"))
+            {
+			    goIntervieweeFace = Instantiate(Resources.Load(sIntervieweeName + "_Face")) as GameObject;
+            }
 			//Instantiate(Resources.Load(sIntervieweeName + "_Face"));
 			//goIntervieweeFace.transform.Translate(this.transform.position.x, this.transform.position.y, this.transform.position.z, Space.World);
 		}	

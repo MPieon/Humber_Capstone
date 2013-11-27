@@ -3,10 +3,8 @@
 	<!--	Each time you talk to Jack new Convo starts	-->
 	<Convo_0>
 		<!-- First response to what Jack says -->
-		<A1>Please talk to me... I'm so lonely</A1>
-		<A2>This is an important matter</A2>
-		<A3>There isn't anyone here. Want to go to jail?</A3>
-		<A4>I wish you weren't so mean *Cry infront of him*</A4>
+		<A1>Can you tell me what happened here?</A1>
+		<A2>Can I ask you a few questions?</A2>
 		
 		<!-- Second response to what Jack says -->
 

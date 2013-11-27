@@ -53,8 +53,10 @@
      <Compile Include="Assets\Scripts\Player\XML_Load.cs" />
      <Compile Include="Assets\Scripts\Player\characterController.cs" />
      <None Include="Assets\Resources\_XMLData\Jack_Says.xml" />
+     <None Include="Assets\Resources\_XMLData\trashbin_Answers.xml" />
      <None Include="Assets\Resources\_XMLData\Jack_Answers.xml" />
      <None Include="Assets\Resources\_XMLData\Bob_Says.xml" />
+     <None Include="Assets\Resources\_XMLData\trashbin_Says.xml" />
      <None Include="Assets\Resources\_XMLData\Bob_Answers.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

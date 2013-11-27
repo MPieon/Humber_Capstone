@@ -3,13 +3,11 @@
 	<!--	Each time you talk to Jack new Convo starts	-->
 	<Convo_0>
 		<!-- First Jack Says -->
-		<Say>I'm not interested in talking with you!</Say> 
+		<Say>I am sorry I have to go to work, what is it?</Say> 
 		
 		<!-- Jack first response to player -->
-		<R1>Ya.. No thanks</R1>
-		<R2>Like I care?</R2>
-		<R3>Do you want to be sued?</R3>
-		<R4>Are you really crying right now?</R4>
+		<R1>Sorry, I have to go</R1>
+		<R2>Sure, what can I help you with officer?</R2>
 		
 		
 
